@@ -1,4 +1,4 @@
-package config
+package data
 
 import org.jetbrains.exposed.sql.Table
 
