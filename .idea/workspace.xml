@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor: Altered directory">
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaListagemPedidos">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="27446000" />
+      <workItem from="1750164438101" duration="28962000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -219,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750192477504</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feet: Created TelaListagemPedidos">
+      <option name="closed" value="true" />
+      <created>1750194092075</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750194092075</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +257,7 @@
     <MESSAGE value="feat: add expandable/collapsible categories to sidebar menu" />
     <MESSAGE value="feat: Created model, dao and screan to lote" />
     <MESSAGE value="refactor: Altered directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Altered directory" />
+    <MESSAGE value="feet: Created TelaListagemPedidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaListagemPedidos" />
   </component>
 </project>
