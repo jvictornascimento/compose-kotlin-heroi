@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feat: add expandable/collapsible categories to sidebar menu">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/data/PedidoItens.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/data/Pedidos.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Pedido.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/SeletorDeItens.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaCadastroPedido.kt" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor: Altered directory">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/Empresas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Empresas.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/Itens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" afterDir="false" />
     </list>
@@ -106,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="25523000" />
+      <workItem from="1750164438101" duration="27446000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -212,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750184024364</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: Created model, dao and screan to lote">
+      <option name="closed" value="true" />
+      <created>1750192448820</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750192448820</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor: Altered directory">
+      <option name="closed" value="true" />
+      <created>1750192477504</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750192477504</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,9 +247,10 @@
     <MESSAGE value="feet: Created TelaEditarItem" />
     <MESSAGE value="feet: Created MostrarDetalhesItem" />
     <MESSAGE value="feet: Created model and dao to Empresa" />
-    <MESSAGE value="refactor: Altered directory" />
     <MESSAGE value="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas" />
     <MESSAGE value="feat: add expandable/collapsible categories to sidebar menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add expandable/collapsible categories to sidebar menu" />
+    <MESSAGE value="feat: Created model, dao and screan to lote" />
+    <MESSAGE value="refactor: Altered directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Altered directory" />
   </component>
 </project>

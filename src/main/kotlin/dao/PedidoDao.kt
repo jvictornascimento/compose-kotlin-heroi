@@ -31,21 +31,23 @@ object PedidoDao {
         println("Pedido inserido com sucesso")
     }
 
-//    fun listarTodos(): List<Pedido> = transaction {
-//        Pedidos.selectAll().map { row ->
-//            val pedidoId = row[Pedidos.id]
-//            val itensIds = PedidoItens.select { PedidoItens.pedidoId eq pedidoId }
-//                .map { it[PedidoItens.itemId] }
-//
-//            Pedido(
-//                id = pedidoId,
-//                codigo = row[Pedidos.codigo],
-//                dataCompra = row[Pedidos.dataCompra],
-//                empresaId = row[Pedidos.empresaId],
-//                itens = itensIds
-//            )
-//        }
-//    }
+    fun listarTodos(): List<Pedido> = transaction {
+        Pedidos.selectAll().map { row ->
+            val pedidoIdEntity = row[Pedidos.id]
+            val pedidoId = pedidoIdEntity.value
+
+            val itensIds = PedidoItens.select { PedidoItens.pedidoId eq pedidoId }
+                .map { it[PedidoItens.itemId] }
+
+            Pedido(
+                id = pedidoId,
+                codigo = row[Pedidos.codigo],
+                dataCompra = row[Pedidos.dataCompra],
+                empresaId = row[Pedidos.empresaId],
+                itens = itensIds
+            )
+        }
+    }
 //
 //    fun atualizar(pedido: Pedido) {
 //        transaction {

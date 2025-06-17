@@ -34,7 +34,7 @@ fun MenuLateral(selectedTela: String, onTelaSelecionada: (String) -> Unit) {
 
         MenuCategoria("Lote") {
             MenuItem("Novo", selectedTela == "cadastroPedido") { onTelaSelecionada("cadastroPedido") }
-            MenuItem("Ver Todos", selectedTela == "listagemLote") { onTelaSelecionada("listagemLote") }
+            MenuItem("Ver Todos", selectedTela == "listagemPedidos") { onTelaSelecionada("listagemPedidos") }
             MenuItem("Impressão", selectedTela == "impressaoLote") { onTelaSelecionada("impressaoLote") }
         }
         MenuCategoria("Configuraçãoes") {

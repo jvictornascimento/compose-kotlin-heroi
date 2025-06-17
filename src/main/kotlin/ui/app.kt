@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import model.Empresa
 import model.Item
+import model.Pedido
 import ui.components.MenuLateral
 import ui.empresa.TelaCadastroEmpresa
 import ui.empresa.TelaEditarEmpresa
@@ -18,6 +19,7 @@ import ui.item.TelaCadastroItem
 import ui.item.TelaEditarItem
 import ui.item.TelaListagemItens
 import ui.pedido.TelaCadastroPedido
+import ui.pedido.TelaListagemPedidos
 
 @Composable
 fun app() {
@@ -28,6 +30,7 @@ fun app() {
             MenuLateral(selectedTela = telaAtual, onTelaSelecionada = { telaAtual = it })
             var itemSelecionado by remember { mutableStateOf<Item?>(null) }
             var empresaSelecionado by remember { mutableStateOf<Empresa?>(null) }
+            var pedidoSelecionado by remember { mutableStateOf<Pedido?>(null) }
 
             Divider(modifier = Modifier
                 .fillMaxHeight()
@@ -71,9 +74,16 @@ fun app() {
                             onCancelar = { telaAtual = "home" }
                         )
                     }
+
                     "cadastroPedido" -> TelaCadastroPedido (
-                        onSalvar = { telaAtual = "home" },
+                        onSalvar = { telaAtual = "listagemPedidos" },
                         onCancelar = { telaAtual = "home" }
+                    )
+                    "listagemPedidos" -> TelaListagemPedidos(
+                        onEditar = { pedido ->
+                            pedidoSelecionado = pedido
+                            telaAtual = "listagemPedidos"
+                        }
                     )
 
                     "cadastroLote" -> {/* TelaCadastroLote() - futura */}
