@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaEditarItem">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/components/MostrarDetalhesItem.kt" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created MostrarDetalhesItem">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/config/Empresas.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Empresa.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaListagemItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaListagemItens.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -87,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="14015000" />
+      <workItem from="1750164438101" duration="15242000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -153,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750179713832</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feet: Created MostrarDetalhesItem">
+      <option name="closed" value="true" />
+      <created>1750180399309</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750180399309</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +189,7 @@
     <MESSAGE value="feet: Created MenuLateral and TelaListagemItens" />
     <MESSAGE value="feet: Created TelaCadastroItem" />
     <MESSAGE value="feet: Created TelaEditarItem" />
-    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaEditarItem" />
+    <MESSAGE value="feet: Created MostrarDetalhesItem" />
+    <option name="LAST_COMMIT_MESSAGE" value="feet: Created MostrarDetalhesItem" />
   </component>
 </project>
