@@ -8,7 +8,15 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import model.Empresa
 import model.Item
+import ui.components.MenuLateral
+import ui.empresa.TelaCadastroEmpresa
+import ui.empresa.TelaEditarEmpresa
+import ui.empresa.TelaListagemEmpresas
+import ui.item.TelaCadastroItem
+import ui.item.TelaEditarItem
+import ui.item.TelaListagemItens
 
 @Composable
 fun app() {
@@ -18,6 +26,7 @@ fun app() {
         Row(modifier = Modifier.fillMaxSize()) {
             MenuLateral(selectedTela = telaAtual, onTelaSelecionada = { telaAtual = it })
             var itemSelecionado by remember { mutableStateOf<Item?>(null) }
+            var empresaSelecionado by remember { mutableStateOf<Empresa?>(null) }
 
             Divider(modifier = Modifier
                 .fillMaxHeight()
@@ -33,17 +42,35 @@ fun app() {
                     "listagemItem" -> TelaListagemItens(
                         onEditar = { item ->
                             itemSelecionado = item
-                            telaAtual = "editar"
+                            telaAtual = "editarItem"
                         }
                     )
-
-                    "editar" -> itemSelecionado?.let { item ->
+                    "editarItem" -> itemSelecionado?.let { item ->
                         TelaEditarItem(
                             itemOriginal = item,
                             onSalvar = { telaAtual = "listagemItem" },
                             onCancelar = { telaAtual = "home" }
                         )
                     }
+
+                    "cadastroEmpresa" -> TelaCadastroEmpresa(
+                        onSalvar = { telaAtual = "listagemEmpresa" },
+                        onCancelar = { telaAtual = "home" }
+                    )
+                    "listagemEmpresa" -> TelaListagemEmpresas(
+                        onEditar = { empresa ->
+                            empresaSelecionado = empresa
+                            telaAtual = "editarEmpresa"
+                        }
+                    )
+                    "editarEmpresa" -> empresaSelecionado?.let { empresa ->
+                        TelaEditarEmpresa(
+                            empresaOriginal = empresa,
+                            onSalvar = { telaAtual = "listagemEmpresa" },
+                            onCancelar = { telaAtual = "home" }
+                        )
+                    }
+
                     "cadastroLote" -> {/* TelaCadastroLote() - futura */}
                     "listagemLote" -> {/* TelaListagemLote() - futura */}
                     "impressaoLote" -> {/* TelaImpressaoLote() - futura */}
