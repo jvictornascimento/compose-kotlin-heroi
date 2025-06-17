@@ -1,7 +1,7 @@
 package dao
 
 import model.Item
-import config.Itens
+import data.Itens
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.selectAll

@@ -1,10 +1,7 @@
 package dao
 
-import config.Empresas
-import config.Itens
+import data.Empresas
 import model.Empresa
-import model.Item
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction

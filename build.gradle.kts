@@ -25,6 +25,8 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:0.45.0")
     implementation("mysql:mysql-connector-java:8.0.33")
     implementation("org.jetbrains.compose.desktop:desktop:1.5.10")
+    implementation("org.jetbrains.exposed:exposed-java-time:0.50.1")
+
 }
 
 compose.desktop {

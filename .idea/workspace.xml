@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas">
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feat: add expandable/collapsible categories to sidebar menu">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/data/PedidoItens.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/data/Pedidos.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Pedido.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/SeletorDeItens.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaCadastroPedido.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/Empresas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Empresas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/Itens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +79,7 @@
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\kotlin\ui\components" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="data" />
       <recent name="config" />
       <recent name="model" />
     </key>
@@ -92,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="17570000" />
+      <workItem from="1750164438101" duration="25523000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -190,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750183434754</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: add expandable/collapsible categories to sidebar menu">
+      <option name="closed" value="true" />
+      <created>1750184024364</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750184024364</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +242,7 @@
     <MESSAGE value="feet: Created model and dao to Empresa" />
     <MESSAGE value="refactor: Altered directory" />
     <MESSAGE value="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas" />
+    <MESSAGE value="feat: add expandable/collapsible categories to sidebar menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add expandable/collapsible categories to sidebar menu" />
   </component>
 </project>

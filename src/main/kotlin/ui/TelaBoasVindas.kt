@@ -28,7 +28,7 @@ fun TelaBoasVindas(onNavegar: (String) -> Unit) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(onClick = { onNavegar("listagemItem") }) {
+        Button(onClick = { onNavegar("cadastroPedido") }) {
             Text("Cadastrar um novo Lote")
         }
         Spacer(modifier = Modifier.height(16.dp))

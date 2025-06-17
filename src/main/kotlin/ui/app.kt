@@ -17,6 +17,7 @@ import ui.empresa.TelaListagemEmpresas
 import ui.item.TelaCadastroItem
 import ui.item.TelaEditarItem
 import ui.item.TelaListagemItens
+import ui.pedido.TelaCadastroPedido
 
 @Composable
 fun app() {
@@ -70,6 +71,10 @@ fun app() {
                             onCancelar = { telaAtual = "home" }
                         )
                     }
+                    "cadastroPedido" -> TelaCadastroPedido (
+                        onSalvar = { telaAtual = "home" },
+                        onCancelar = { telaAtual = "home" }
+                    )
 
                     "cadastroLote" -> {/* TelaCadastroLote() - futura */}
                     "listagemLote" -> {/* TelaListagemLote() - futura */}
