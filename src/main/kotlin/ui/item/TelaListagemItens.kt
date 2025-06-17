@@ -1,4 +1,4 @@
-package ui
+package ui.item
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dao.ItemDao
 import model.Item
-import ui.components.MostrarDetalhesItem
 
 @Composable
 fun TelaListagemItens(onEditar: (Item) -> Unit) {

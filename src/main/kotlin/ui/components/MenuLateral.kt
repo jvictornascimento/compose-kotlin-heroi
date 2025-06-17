@@ -1,4 +1,4 @@
-package ui
+package ui.components
 
 
 import androidx.compose.foundation.background
@@ -36,6 +36,13 @@ fun MenuLateral(selectedTela: String, onTelaSelecionada: (String) -> Unit) {
             MenuItem("Novo", selectedTela == "cadastroLote") { onTelaSelecionada("cadastroLote") }
             MenuItem("Ver Todos", selectedTela == "listagemLote") { onTelaSelecionada("listagemLote") }
             MenuItem("Impressão", selectedTela == "impressaoLote") { onTelaSelecionada("impressaoLote") }
+        }
+        MenuCategoria("Configuraçãoes") {
+            MenuCategoria("Empresa"){
+                MenuItem("Nova", selectedTela == "cadastroEmpresa") { onTelaSelecionada("cadastroEmpresa") }
+                MenuItem("Ver Todas", selectedTela == "listagemEmpresa") { onTelaSelecionada("listagemEmpresa") }
+            }
+            MenuItem("Configurações", selectedTela == "") { onTelaSelecionada("") }
         }
     }
 }

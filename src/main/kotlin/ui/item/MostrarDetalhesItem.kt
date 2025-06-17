@@ -1,4 +1,4 @@
-package ui.components
+package ui.item
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.AlertDialog
