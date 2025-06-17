@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created model and dao to Empresa">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/empresa/TelaEditarEmpresa.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/empresa/TelaListagemEmpresas.kt" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/Empresas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/config/Empresas.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/MenuLateral.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaCadastroItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaEditarItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaListagemItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaListagemItens.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/components/MostrarDetalhesItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/MostrarDetalhesItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/components/MenuLateral.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="16889000" />
+      <workItem from="1750164438101" duration="17570000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -182,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750181657026</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactor: Altered directory">
+      <option name="closed" value="true" />
+      <created>1750183324771</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750183324771</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas">
+      <option name="closed" value="true" />
+      <created>1750183434754</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750183434754</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +218,8 @@
     <MESSAGE value="feet: Created TelaEditarItem" />
     <MESSAGE value="feet: Created MostrarDetalhesItem" />
     <MESSAGE value="feet: Created model and dao to Empresa" />
-    <option name="LAST_COMMIT_MESSAGE" value="feet: Created model and dao to Empresa" />
+    <MESSAGE value="refactor: Altered directory" />
+    <MESSAGE value="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas" />
+    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaEditarEmpresa, TelaCadastroEmpresa and TelaListagemEmpresas" />
   </component>
 </project>

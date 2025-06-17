@@ -8,7 +8,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -49,13 +49,22 @@ fun MenuLateral(selectedTela: String, onTelaSelecionada: (String) -> Unit) {
 
 @Composable
 fun MenuCategoria(titulo: String, content: @Composable ColumnScope.() -> Unit) {
-    Text(
-        text = titulo,
-        style = MaterialTheme.typography.subtitle1,
-        modifier = Modifier.padding(vertical = 8.dp, horizontal = 8.dp)
-    )
-    Column(modifier = Modifier.padding(start = 16.dp)) {
-        content()
+    var expandido by remember { mutableStateOf(true) }
+
+    Column {
+        Text(
+            text = if (expandido) "▼ $titulo" else "► $titulo",
+            style = MaterialTheme.typography.subtitle1,
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { expandido = !expandido }
+                .padding(vertical = 8.dp, horizontal = 8.dp)
+        )
+        if (expandido) {
+            Column(modifier = Modifier.padding(start = 16.dp)) {
+                content()
+            }
+        }
     }
 }
 
