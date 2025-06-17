@@ -1,6 +1,5 @@
 package ui
 
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -13,25 +12,30 @@ import model.Item
 import dao.ItemDao
 
 @Composable
-fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
-    var codigo by remember { mutableStateOf("") }
-    var descricao by remember { mutableStateOf("") }
-    var ip by remember { mutableStateOf("") }
-    var temperatura by remember { mutableStateOf("") }
-    var ledPorMetro by remember { mutableStateOf("") }
-    var modelo by remember { mutableStateOf("") }
-    var amper by remember { mutableStateOf("") }
-    var watts by remember { mutableStateOf("") }
-    var blindada by remember { mutableStateOf(false) }
-    var gtin by remember { mutableStateOf("") }
-    var tipoLed by remember { mutableStateOf("") }
-    var fluxoLuminoso by remember { mutableStateOf("") }
-    var volt by remember { mutableStateOf("") }
+fun TelaEditarItem(
+    itemOriginal: Item,
+    onSalvar: () -> Unit,
+    onCancelar: () -> Unit
+) {
+    var codigo by remember { mutableStateOf(itemOriginal.codigo.toString()) }
+    var descricao by remember { mutableStateOf(itemOriginal.descricao ?: "") }
+    var ip by remember { mutableStateOf(itemOriginal.ip?.toString() ?: "") }
+    var temperatura by remember { mutableStateOf(itemOriginal.temperatura ?: "") }
+    var ledPorMetro by remember { mutableStateOf(itemOriginal.ledPorMetro?.toString() ?: "") }
+    var modelo by remember { mutableStateOf(itemOriginal.modelo ?: "") }
+    var amper by remember { mutableStateOf(itemOriginal.amper?.toString() ?: "") }
+    var watts by remember { mutableStateOf(itemOriginal.watts?.toString() ?: "") }
+    var blindada by remember { mutableStateOf(itemOriginal.blindada ?: false) }
+    var gtin by remember { mutableStateOf(itemOriginal.gtin?.toString() ?: "") }
+    var tipoLed by remember { mutableStateOf(itemOriginal.tipoLed ?: "") }
+    var fluxoLuminoso by remember { mutableStateOf(itemOriginal.fluxoLuminoso ?: "") }
+    var volt by remember { mutableStateOf(itemOriginal.volt?.toString() ?: "") }
 
-
-    Column(modifier = Modifier.padding(16.dp).verticalScroll(rememberScrollState())) {
-        Text("Cadastro de Item", style = MaterialTheme.typography.h5)
-
+    Column(modifier = Modifier
+        .padding(16.dp)
+        .verticalScroll(rememberScrollState())
+    ) {
+        Text("Editar Item", style = MaterialTheme.typography.h5)
         Spacer(modifier = Modifier.height(8.dp))
 
         Row(modifier = Modifier
@@ -50,8 +54,8 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
             Checkbox(
                 checked = blindada,
                 onCheckedChange = { blindada = it });
-                Text("Blindada")
-            }
+            Text("Blindada")
+        }
 
 
         // Campos String com espaço maior
@@ -168,10 +172,16 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
             )
         }
 
+        // Botões
         Row(modifier = Modifier.padding(top = 16.dp)) {
             Button(onClick = {
-                // Faz a gravação
-                val item = Item(
+                val novoCodigo = codigo.toIntOrNull()
+                if (novoCodigo == null) {
+                    println("Erro: Código inválido! Precisa ser número inteiro.")
+                    return@Button
+                }
+                val itemAtualizado = Item(
+                    id = itemOriginal.id,
                     codigo = codigo.toIntOrNull() ?: 0,
                     descricao = descricao,
                     ip = ip.toIntOrNull(),
@@ -186,29 +196,15 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
                     fluxoLuminoso = fluxoLuminoso,
                     volt = volt.toIntOrNull()
                 )
-                ItemDao.inserir(item)
+                ItemDao.atualizar(itemAtualizado)
                 onSalvar()
             }) {
-                Text("Salvar")
+                Text("Salvar Alterações")
             }
 
             Spacer(modifier = Modifier.width(16.dp))
 
             Button(onClick = {
-                // Limpa tudo e volta pra home
-                codigo = ""
-                descricao = ""
-                ip = ""
-                temperatura = ""
-                ledPorMetro = ""
-                modelo = ""
-                amper = ""
-                watts = ""
-                blindada = false
-                gtin = ""
-                tipoLed = ""
-                fluxoLuminoso = ""
-                volt = ""
                 onCancelar()
             }) {
                 Text("Cancelar")

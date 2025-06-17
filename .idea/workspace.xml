@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="Started project">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/config/DatabaseConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/config/Itens.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/MenuLateral.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaCadastroItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaListagemItens.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaCadastroItem">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaEditarItem.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/Itens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/config/Itens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaCadastroItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaCadastroItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaListagemItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaListagemItens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="9606000" />
+      <workItem from="1750164438101" duration="13114000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -107,7 +101,55 @@
       <option name="project" value="LOCAL" />
       <updated>1750165197468</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feet: Implements dependencies">
+      <option name="closed" value="true" />
+      <created>1750176067084</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176067084</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feet: Created TelaBoasVindas">
+      <option name="closed" value="true" />
+      <created>1750176104293</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176104293</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feet: Model and Dao to Item">
+      <option name="closed" value="true" />
+      <created>1750176133325</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176133325</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feet: Configured Database">
+      <option name="closed" value="true" />
+      <created>1750176147682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176147682</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feet: Created MenuLateral and TelaListagemItens">
+      <option name="closed" value="true" />
+      <created>1750176169577</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176169577</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feet: Created TelaCadastroItem">
+      <option name="closed" value="true" />
+      <created>1750176180753</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176180753</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +168,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Started project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started project" />
+    <MESSAGE value="feet: Implements dependencies" />
+    <MESSAGE value="feet: Created TelaBoasVindas" />
+    <MESSAGE value="feet: Model and Dao to Item" />
+    <MESSAGE value="feet: Configured Database" />
+    <MESSAGE value="feet: Created MenuLateral and TelaListagemItens" />
+    <MESSAGE value="feet: Created TelaCadastroItem" />
+    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaCadastroItem" />
   </component>
 </project>

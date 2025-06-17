@@ -14,7 +14,7 @@ object Itens : Table("item") {
     val watts = integer("watts").nullable()
     val blindada = bool("blindada").nullable()
     val gtin = long("gtin").nullable()
-    val tipoLed = integer("tipoLed").nullable()
+    val tipoLed = varchar("tipoLed",50).nullable()
     val fluxoLuminoso = varchar("fluxoLuminoso", 10).nullable()
     val volt = integer("volt").nullable()
 

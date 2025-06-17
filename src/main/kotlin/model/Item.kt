@@ -12,7 +12,7 @@ data class Item(
     val watts: Int?,
     val blindada: Boolean?,
     val gtin: Long?,
-    val tipoLed: Int?,
+    val tipoLed: String?,
     val fluxoLuminoso: String?,
     val volt: Int?
 )
