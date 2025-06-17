@@ -20,6 +20,11 @@ dependencies {
     // (in a separate module for demo project and in testMain).
     // With compose.desktop.common you will also lose @Preview functionality
     implementation(compose.desktop.currentOs)
+    implementation("org.jetbrains.exposed:exposed-core:0.45.0")
+    implementation("org.jetbrains.exposed:exposed-dao:0.45.0")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.45.0")
+    implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("org.jetbrains.compose.desktop:desktop:1.5.10")
 }
 
 compose.desktop {
