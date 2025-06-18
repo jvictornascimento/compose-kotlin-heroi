@@ -2,7 +2,8 @@ package model
 
 data class Item(
     val id: Int = 0,
-    val codigo: Int,
+    val codigoRusso: Int?,
+    val codigoMali: Int?,
     val descricao: String,
     val ip: Int?,
     val temperatura: String?,

@@ -28,7 +28,8 @@ fun SeletorDeItens(itensDisponiveis: List<Item>, itensSelecionados: SnapshotStat
             emptyList()
         } else {
             itensDisponiveis.filter {
-                it.codigo.toString().contains(filtro, ignoreCase = true) ||
+                it.codigoRusso.toString().contains(filtro, ignoreCase = true) ||
+                it.codigoMali.toString().contains(filtro, ignoreCase = true) ||
                         it.descricao.contains(filtro, ignoreCase = true)
             }
         }
@@ -40,7 +41,7 @@ fun SeletorDeItens(itensDisponiveis: List<Item>, itensSelecionados: SnapshotStat
                         .padding(4.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text("${item.codigo} - ${item.descricao}")
+                    Text("${item.codigoRusso?: ""} | ${item.codigoMali?: ""}  - ${item.descricao}")
                     Button(onClick = {
                         if (!itensSelecionados.contains(item)) {
                             itensSelecionados.add(item)
@@ -64,7 +65,7 @@ fun SeletorDeItens(itensDisponiveis: List<Item>, itensSelecionados: SnapshotStat
                         .padding(4.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text("${item.codigo} - ${item.descricao}")
+                    Text("${item.codigoRusso?: ""} | ${item.codigoMali?: ""}  - ${item.descricao}")
                     Button(onClick = { itensSelecionados.remove(item) }) {
                         Text("Remover")
                     }

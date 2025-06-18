@@ -24,7 +24,7 @@ fun TelaListagemItens(onEditar: (Item) -> Unit) {
                 .fillMaxWidth()
                 .padding(8.dp)
             ) {
-                Text("Código: ${item.codigo} - ${item.descricao}", modifier = Modifier.weight(1f))
+                Text("Códigos: ${item.codigoRusso?: ""} | ${item.codigoMali?: ""} - ${item.descricao}", modifier = Modifier.weight(1f))
 
                 Button(onClick = {
                     itemSelecionado = item

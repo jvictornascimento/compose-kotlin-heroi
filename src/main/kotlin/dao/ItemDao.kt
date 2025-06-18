@@ -12,7 +12,8 @@ object ItemDao {
     fun inserir(item: Item) {
         transaction {
             Itens.insert {
-                it[codigo] = item.codigo
+                it[codigoRusso] = item.codigoRusso
+                it[codigoMali] = item.codigoMali
                 it[descricao] = item.descricao
                 it[ip] = item.ip
                 it[temperatura] = item.temperatura
@@ -33,7 +34,8 @@ object ItemDao {
         Itens.selectAll().map {
             Item(
                 id = it[Itens.id],
-                codigo = it[Itens.codigo],
+                codigoRusso = it[Itens.codigoRusso],
+                codigoMali = it[Itens.codigoMali],
                 descricao = it[Itens.descricao],
                 ip = it[Itens.ip],
                 temperatura = it[Itens.temperatura],
@@ -51,11 +53,12 @@ object ItemDao {
     }
 
     fun buscarPorCodigo(codigoBusca: Int): Item? = transaction {
-        Itens.select { Itens.codigo eq codigoBusca }
+        Itens.select { Itens.codigoRusso eq codigoBusca }
             .mapNotNull {
                 Item(
                     id = it[Itens.id],
-                    codigo = it[Itens.codigo],
+                    codigoRusso = it[Itens.codigoRusso],
+                    codigoMali = it[Itens.codigoMali],
                     descricao = it[Itens.descricao],
                     ip = it[Itens.ip],
                     temperatura = it[Itens.temperatura],
@@ -75,8 +78,9 @@ object ItemDao {
 
     fun atualizar(item: Item) {
         transaction {
-            Itens.update({ Itens.id eq item.id }) { // filtra pelo id (único e fixo)
-                it[codigo] = item.codigo
+            Itens.update({ Itens.id eq item.id }) {
+                it[codigoRusso] = item.codigoRusso
+                it[codigoMali] = item.codigoMali
                 it[descricao] = item.descricao
                 it[ip] = item.ip
                 it[temperatura] = item.temperatura

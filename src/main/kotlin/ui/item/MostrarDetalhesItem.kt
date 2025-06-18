@@ -18,7 +18,8 @@ fun MostrarDetalhesItem(
         title = { Text("Detalhes do Item") },
         text = {
             Column {
-                Text("Código: ${item.codigo}")
+                Text("Código Russo: ${item.codigoRusso?: ""}")
+                Text("Código Mali: ${item.codigoMali?: ""}")
                 Text("Descrição: ${item.descricao ?: ""}")
                 Text("IP: ${item.ip ?: ""}")
                 Text("Temperatura: ${item.temperatura ?: ""}")

@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaListagemPedidos">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created MostrarDetalhesPedido">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/EmpresaDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/MostrarDetalhesItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/MostrarDetalhesItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaListagemItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaListagemItens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/SeletorDeItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/SeletorDeItens.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="28962000" />
+      <workItem from="1750164438101" duration="32212000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -225,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750194092075</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feet: Created MostrarDetalhesPedido">
+      <option name="closed" value="true" />
+      <created>1750195777546</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1750195777546</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +272,7 @@
     <MESSAGE value="feat: Created model, dao and screan to lote" />
     <MESSAGE value="refactor: Altered directory" />
     <MESSAGE value="feet: Created TelaListagemPedidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaListagemPedidos" />
+    <MESSAGE value="feet: Created MostrarDetalhesPedido" />
+    <option name="LAST_COMMIT_MESSAGE" value="feet: Created MostrarDetalhesPedido" />
   </component>
 </project>

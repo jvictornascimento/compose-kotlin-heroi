@@ -16,7 +16,8 @@ fun TelaEditarItem(
     onSalvar: () -> Unit,
     onCancelar: () -> Unit
 ) {
-    var codigo by remember { mutableStateOf(itemOriginal.codigo.toString()) }
+    var codigoRusso by remember { mutableStateOf(itemOriginal.codigoRusso.toString()) }
+    var codigoMali by remember { mutableStateOf(itemOriginal.codigoMali.toString()) }
     var descricao by remember { mutableStateOf(itemOriginal.descricao ?: "") }
     var ip by remember { mutableStateOf(itemOriginal.ip?.toString() ?: "") }
     var temperatura by remember { mutableStateOf(itemOriginal.temperatura ?: "") }
@@ -42,9 +43,18 @@ fun TelaEditarItem(
             .padding(bottom = 8.dp)) {
 
             OutlinedTextField(
-                value = codigo,
-                onValueChange = { codigo = it },
-                label = { Text("Código") },
+                value = codigoRusso,
+                onValueChange = { codigoRusso = it },
+                label = { Text("Código Russo") },
+                modifier = Modifier
+                    .width(300.dp)
+                    .height(80.dp)
+                    .padding(8.dp)
+            )
+            OutlinedTextField(
+                value = codigoMali,
+                onValueChange = { codigoMali = it },
+                label = { Text("Código Mali") },
                 modifier = Modifier
                     .width(300.dp)
                     .height(80.dp)
@@ -56,8 +66,6 @@ fun TelaEditarItem(
             Text("Blindada")
         }
 
-
-        // Campos String com espaço maior
         OutlinedTextField(
             value = descricao,
             onValueChange = { descricao = it },
@@ -174,14 +182,20 @@ fun TelaEditarItem(
         // Botões
         Row(modifier = Modifier.padding(top = 16.dp)) {
             Button(onClick = {
-                val novoCodigo = codigo.toIntOrNull()
-                if (novoCodigo == null) {
+                val novoCodigoRusso = codigoRusso.toIntOrNull()
+                val novoCodigoMali = codigoMali.toIntOrNull()
+                if (novoCodigoRusso == null) {
+                    println("Erro: Código inválido! Precisa ser número inteiro.")
+                    return@Button
+                }
+                if (novoCodigoMali == null) {
                     println("Erro: Código inválido! Precisa ser número inteiro.")
                     return@Button
                 }
                 val itemAtualizado = Item(
                     id = itemOriginal.id,
-                    codigo = codigo.toIntOrNull() ?: 0,
+                    codigoRusso = codigoRusso.toIntOrNull() ?: 0,
+                    codigoMali = codigoMali.toIntOrNull() ?: 0,
                     descricao = descricao,
                     ip = ip.toIntOrNull(),
                     temperatura = temperatura,

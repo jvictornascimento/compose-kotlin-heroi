@@ -13,7 +13,8 @@ import dao.ItemDao
 
 @Composable
 fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
-    var codigo by remember { mutableStateOf("") }
+    var codigoRusso by remember { mutableStateOf("") }
+    var codigoMali by remember { mutableStateOf("") }
     var descricao by remember { mutableStateOf("") }
     var ip by remember { mutableStateOf("") }
     var temperatura by remember { mutableStateOf("") }
@@ -38,9 +39,18 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
             .padding(bottom = 8.dp)) {
 
             OutlinedTextField(
-                value = codigo,
-                onValueChange = { codigo = it },
-                label = { Text("Código") },
+                value = codigoRusso,
+                onValueChange = { codigoRusso = it },
+                label = { Text("Código Russo") },
+                modifier = Modifier
+                    .width(300.dp)
+                    .height(80.dp)
+                    .padding(8.dp)
+            )
+            OutlinedTextField(
+                value = codigoMali,
+                onValueChange = { codigoMali= it },
+                label = { Text("Código Mali") },
                 modifier = Modifier
                     .width(300.dp)
                     .height(80.dp)
@@ -169,9 +179,9 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
 
         Row(modifier = Modifier.padding(top = 16.dp)) {
             Button(onClick = {
-                // Faz a gravação
                 val item = Item(
-                    codigo = codigo.toIntOrNull() ?: 0,
+                    codigoRusso = codigoRusso.toIntOrNull() ?: 0,
+                    codigoMali = codigoMali.toIntOrNull() ?: 0,
                     descricao = descricao,
                     ip = ip.toIntOrNull(),
                     temperatura = temperatura,
@@ -195,7 +205,8 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
 
             Button(onClick = {
                 // Limpa tudo e volta pra home
-                codigo = ""
+                codigoRusso = ""
+                codigoMali = ""
                 descricao = ""
                 ip = ""
                 temperatura = ""

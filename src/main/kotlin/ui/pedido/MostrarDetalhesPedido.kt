@@ -29,7 +29,7 @@ fun MostrarDetalhesPedido(
                 Text("Itens do Pedido:")
                 pedido.itens.forEach { itemId ->
                     val item = itens.find { it.id == itemId }
-                    Text("- Código do Item: ${item?.codigo ?: "Item não encontrado"}")
+                    Text("- Códigos do Item: ${item?.codigoRusso ?: "Item não encontrado"} | ${item?.codigoMali ?: ""}")
                 }
             }
         },

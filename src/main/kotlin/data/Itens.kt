@@ -4,7 +4,8 @@ import org.jetbrains.exposed.sql.Table
 
 object Itens : Table("item") {
     val id = integer("id").autoIncrement()
-    val codigo = integer("codigo")
+    val codigoRusso = integer("codigo_russo").nullable()
+    val codigoMali = integer("codigo_mali").nullable()
     val descricao = varchar("descricao", 100)
     val ip = integer("ip").nullable()
     val temperatura = varchar("temperatura", 50).nullable()
