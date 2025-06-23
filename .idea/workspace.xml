@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created MostrarDetalhesPedido">
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor: Modified the name of an attribute and added another attribute to the Item">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/relatorios/lote.jasper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/relatorios/lote.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/MostrarDetalhesItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/MostrarDetalhesItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaListagemItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaListagemItens.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/MostrarDetalhesPedido.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/SeletorDeItens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/SeletorDeItens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Class" />
         <option value="Kotlin Object" />
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -39,12 +39,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2ydVSBiZQD62BGa9CxZuCHykwv5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -59,6 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Z:/Java/desktop-kotlin-compose/Heroi/src/main/resources/relatorios",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,7 +69,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\resources\relatorios" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src" />
+      <recent name="Z:\Java\desktop-kotlin-compose\Heroi" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\kotlin\ui\item" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\kotlin\ui\empresa" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\kotlin\ui\components" />
@@ -101,7 +107,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
-      <workItem from="1750164438101" duration="32212000" />
+      <workItem from="1750164438101" duration="33868000" />
+      <workItem from="1750684406983" duration="6504000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -239,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750195777546</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactor: Modified the name of an attribute and added another attribute to the Item">
+      <option name="closed" value="true" />
+      <created>1750205517921</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1750205517921</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +288,7 @@
     <MESSAGE value="refactor: Altered directory" />
     <MESSAGE value="feet: Created TelaListagemPedidos" />
     <MESSAGE value="feet: Created MostrarDetalhesPedido" />
-    <option name="LAST_COMMIT_MESSAGE" value="feet: Created MostrarDetalhesPedido" />
+    <MESSAGE value="refactor: Modified the name of an attribute and added another attribute to the Item" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Modified the name of an attribute and added another attribute to the Item" />
   </component>
 </project>

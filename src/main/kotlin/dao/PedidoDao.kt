@@ -48,6 +48,23 @@ object PedidoDao {
             )
         }
     }
+    fun buscarPorCodigo(codigo: String): Pedido? = transaction {
+        Pedidos.select { Pedidos.codigo eq codigo }
+            .map { row ->
+                val pedidoId = row[Pedidos.id]
+                val itensIds = PedidoItens.select { PedidoItens.pedidoId eq pedidoId.value }
+                    .map { it[PedidoItens.itemId] }
+
+                Pedido(
+                    id = pedidoId.value,
+                    codigo = row[Pedidos.codigo],
+                    dataCompra = row[Pedidos.dataCompra],
+                    empresaId = row[Pedidos.empresaId],
+                    itens = itensIds
+                )
+            }
+            .firstOrNull()
+    }
 //
 //    fun atualizar(pedido: Pedido) {
 //        transaction {

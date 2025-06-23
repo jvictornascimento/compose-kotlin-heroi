@@ -26,6 +26,11 @@ dependencies {
     implementation("mysql:mysql-connector-java:8.0.33")
     implementation("org.jetbrains.compose.desktop:desktop:1.5.10")
     implementation("org.jetbrains.exposed:exposed-java-time:0.50.1")
+    implementation("net.sf.jasperreports:jasperreports:6.21.4")
+    implementation("org.apache.commons:commons-collections4:4.4") // Necessário para Jasper
+    implementation("net.sf.barcode4j:barcode4j:2.1")
+    implementation("org.apache.xmlgraphics:batik-all:1.19")
+    implementation("org.apache.xmlgraphics:xmlgraphics-commons:2.11")
 
 }
 

@@ -19,6 +19,7 @@ import ui.item.TelaCadastroItem
 import ui.item.TelaEditarItem
 import ui.item.TelaListagemItens
 import ui.pedido.TelaCadastroPedido
+import ui.pedido.TelaImpressaoEtiquetaLote
 import ui.pedido.TelaListagemPedidos
 
 @Composable
@@ -86,9 +87,10 @@ fun app() {
                         }
                     )
 
+
                     "cadastroLote" -> {/* TelaCadastroLote() - futura */}
                     "listagemLote" -> {/* TelaListagemLote() - futura */}
-                    "impressaoLote" -> {/* TelaImpressaoLote() - futura */}
+                    "impressaoLote" ->  TelaImpressaoEtiquetaLote ()
                     else -> Text("Tela não encontrada!")
                 }
             }

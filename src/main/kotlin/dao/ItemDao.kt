@@ -75,6 +75,27 @@ object ItemDao {
             }
             .singleOrNull()
     }
+    fun buscarPorIds(ids: List<Int>): List<Item> = transaction {
+        Itens.select { Itens.id inList ids }.map {
+            Item(
+                id = it[Itens.id],
+                codigoRusso = it[Itens.codigoRusso],
+                codigoMali = it[Itens.codigoMali],
+                descricao = it[Itens.descricao],
+                ip = it[Itens.ip],
+                temperatura = it[Itens.temperatura],
+                ledPorMetro = it[Itens.ledPorMetro],
+                modelo = it[Itens.modelo],
+                amper = it[Itens.amper],
+                watts = it[Itens.watts],
+                blindada = it[Itens.blindada],
+                gtin = it[Itens.gtin],
+                tipoLed = it[Itens.tipoLed],
+                fluxoLuminoso = it[Itens.fluxoLuminoso],
+                volt = it[Itens.volt]
+            )
+        }
+    }
 
     fun atualizar(item: Item) {
         transaction {
