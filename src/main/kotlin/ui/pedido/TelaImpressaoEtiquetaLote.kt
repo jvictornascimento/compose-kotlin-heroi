@@ -1,16 +1,11 @@
 package ui.pedido
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.input.key.*
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.semantics.SemanticsProperties.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import dao.ItemDao
 import dao.PedidoDao
@@ -57,15 +52,15 @@ fun TelaImpressaoEtiquetaLote() {
         )
 
         Button(onClick = {
-                val pedido = PedidoDao.buscarPorCodigo(codigoPedido)
-                if (pedido != null) {
-                    itensDoPedido = ItemDao.buscarPorIds(pedido.itens)
-                    erro = null
-                } else {
-                    erro = "Pedido não encontrado"
-                    itensDoPedido = emptyList()
-                    itemSelecionado = null
-                }
+            val pedido = PedidoDao.buscarPorCodigo(codigoPedido)
+            if (pedido != null) {
+                itensDoPedido = ItemDao.buscarPorIds(pedido.itens)
+                erro = null
+            } else {
+                erro = "Pedido não encontrado"
+                itensDoPedido = emptyList()
+                itemSelecionado = null
+            }
 
         }) {
             Text("Buscar Itens do Pedido")
@@ -118,7 +113,7 @@ fun gerarPreviewEtiqueta(item: Item, lote: String) {
         val caminhoJrxml = "src/relatorios/lote.jrxml"
 
         val parametros = mutableMapOf<String, Any?>(
-            "descricao" to (item.descricao ?: ""),
+            "descricao" to item.descricao,
             "codigoRusso" to item.codigoRusso,
             "codigoMali" to item.codigoMali,
             "temperatura" to (item.temperatura ?: ""),

@@ -7,17 +7,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dao.EmpresaDao
 import dao.ItemDao
 import dao.PedidoDao
 import kotlinx.coroutines.launch
-import model.Empresa
-import model.Item
 import model.Pedido
-import ui.item.MostrarDetalhesItem
 
 @Composable
-fun TelaListagemPedidos(onEditar: (Pedido)-> Unit) {
+fun TelaListagemPedidos(onEditar: (Pedido) -> Unit) {
     var pedidos by remember { mutableStateOf<List<Pedido>>(emptyList()) }
     var pedidosSelecionado by remember { mutableStateOf<Pedido?>(null) }
     var mostrarDetalhes by remember { mutableStateOf(false) }
@@ -35,9 +31,10 @@ fun TelaListagemPedidos(onEditar: (Pedido)-> Unit) {
         Spacer(modifier = Modifier.height(8.dp))
 
         pedidos.forEach { pedidos ->
-            Row(modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
             ) {
                 Text("Lote: ${pedidos.codigo} - ${pedidos.dataCompra}", modifier = Modifier.weight(1f))
 
@@ -53,7 +50,7 @@ fun TelaListagemPedidos(onEditar: (Pedido)-> Unit) {
                         itens = itens,
                         onEditar = {
                             mostrarDetalhes = false
-                            onEditar(pedidos)
+                            onEditar(pedidosSelecionado!!)
                         },
                         onFechar = {
                             mostrarDetalhes = false

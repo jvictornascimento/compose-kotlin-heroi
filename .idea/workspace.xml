@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor: Modified the name of an attribute and added another attribute to the Item">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/lote.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/lote.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feet: Created TelaImpressaoEtiquetaLote">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaEditarPedido.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/ItemDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dao/PedidoDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/app.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750164436863</updated>
       <workItem from="1750164438101" duration="33868000" />
-      <workItem from="1750684406983" duration="6504000" />
+      <workItem from="1750684406983" duration="8308000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -254,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750205517921</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feet: Created TelaImpressaoEtiquetaLote">
+      <option name="closed" value="true" />
+      <created>1750706237883</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1750706237883</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +293,7 @@
     <MESSAGE value="feet: Created TelaListagemPedidos" />
     <MESSAGE value="feet: Created MostrarDetalhesPedido" />
     <MESSAGE value="refactor: Modified the name of an attribute and added another attribute to the Item" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Modified the name of an attribute and added another attribute to the Item" />
+    <MESSAGE value="feet: Created TelaImpressaoEtiquetaLote" />
+    <option name="LAST_COMMIT_MESSAGE" value="feet: Created TelaImpressaoEtiquetaLote" />
   </component>
 </project>

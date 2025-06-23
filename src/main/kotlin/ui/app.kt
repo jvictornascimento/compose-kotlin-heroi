@@ -19,6 +19,7 @@ import ui.item.TelaCadastroItem
 import ui.item.TelaEditarItem
 import ui.item.TelaListagemItens
 import ui.pedido.TelaCadastroPedido
+import ui.pedido.TelaEditarPedido
 import ui.pedido.TelaImpressaoEtiquetaLote
 import ui.pedido.TelaListagemPedidos
 
@@ -83,9 +84,16 @@ fun app() {
                     "listagemPedidos" -> TelaListagemPedidos(
                         onEditar = { pedido ->
                             pedidoSelecionado = pedido
-                            telaAtual = "listagemPedidos"
+                            telaAtual = "editarPedido"
                         }
                     )
+                    "editarPedido" -> pedidoSelecionado?.let { pedido ->
+                        TelaEditarPedido(
+                            pedidoOriginal = pedido,
+                            onSalvar = { telaAtual = "listagemPedidos" },
+                            onCancelar = { telaAtual = "home" }
+                        )
+                    }
 
 
                     "cadastroLote" -> {/* TelaCadastroLote() - futura */}

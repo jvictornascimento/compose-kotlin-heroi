@@ -65,24 +65,24 @@ object PedidoDao {
             }
             .firstOrNull()
     }
-//
-//    fun atualizar(pedido: Pedido) {
-//        transaction {
-//            Pedidos.update({ Pedidos.id eq pedido.id }) {
-//                it[codigo] = pedido.codigo
-//                it[dataCompra] = pedido.dataCompra
-//                it[empresaId] = pedido.empresaId
-//            }
-//
-//            PedidoItens.deleteWhere { PedidoItens.pedidoId eq pedido.id }
-//
-//            pedido.itens.forEach { itemId ->
-//                PedidoItens.insert {
-//                    it[PedidoItens.pedidoId] = pedido.id
-//                    it[PedidoItens.itemId] = itemId
-//                }
-//            }
-//        }
-//    }
+
+    fun atualizar(pedido: Pedido) {
+        transaction {
+            Pedidos.update({ Pedidos.id eq pedido.id }) {
+                it[codigo] = pedido.codigo
+                it[dataCompra] = pedido.dataCompra
+                it[empresaId] = pedido.empresaId
+            }
+
+            PedidoItens.deleteWhere { PedidoItens.pedidoId eq pedido.id }
+
+            pedido.itens.forEach { itemId ->
+                PedidoItens.insert {
+                    it[PedidoItens.pedidoId] = pedido.id
+                    it[PedidoItens.itemId] = itemId
+                }
+            }
+        }
+    }
 }
 
