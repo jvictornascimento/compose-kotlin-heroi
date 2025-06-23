@@ -75,8 +75,8 @@ fun MenuItem(titulo: String, isSelected: Boolean, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() }
-            .background(if (isSelected) MaterialTheme.colors.primary.copy(alpha = 0.2f) else Color.Transparent)
+            .background(if (isSelected) MaterialTheme.colors.primary else Color.Transparent)
             .padding(vertical = 6.dp, horizontal = 8.dp),
-        color = if (isSelected) MaterialTheme.colors.primary else Color.Black
+        color = if (isSelected) Color.White else Color.Black
     )
 }
