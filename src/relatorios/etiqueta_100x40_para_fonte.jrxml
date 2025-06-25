@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lote" pageWidth="283" pageHeight="112" orientation="Landscape" columnWidth="283" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="863bfde3-f787-4878-8b7d-d860893192b7">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="descricao" class="java.lang.String"/>
+	<parameter name="codigoRusso" class="java.lang.Integer"/>
+	<parameter name="codigoMali" class="java.lang.Integer"/>
+	<parameter name="ip" class="java.lang.Integer"/>
+	<parameter name="temperatura" class="java.lang.String"/>
+	<parameter name="ledPorMetro" class="java.lang.Integer"/>
+	<parameter name="Modelo" class="java.lang.String"/>
+	<parameter name="ampere" class="java.lang.Integer"/>
+	<parameter name="watts" class="java.lang.Integer"/>
+	<parameter name="gtin" class="java.lang.Long"/>
+	<parameter name="tipoLed" class="java.lang.String"/>
+	<parameter name="fluxoLuminoso" class="java.lang.String"/>
+	<parameter name="volts" class="java.lang.Integer"/>
+	<parameter name="lote" class="java.lang.Integer"/>
+	<parameter name="imagem" class="java.lang.Object"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="112" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="10" y="10" width="264" height="92" uuid="fb4431d7-b391-4827-a5df-8ab4b13c6507"/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="10" width="262" height="34" uuid="ff7ca612-85d8-4791-9207-f64c3fb458d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descricao}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="81" y="61" width="120" height="40" uuid="5ef04f7e-bfc7-400a-8ee2-7b42db94cb44"/>
+				<jr:EAN13 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$P{gtin}]]></jr:codeExpression>
+				</jr:EAN13>
+			</componentElement>
+			<textField>
+				<reportElement x="20" y="44" width="252" height="17" uuid="15421bbd-b49c-4d64-83d2-c20b6c56c5f7"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Codigo: " + $P{codigoRusso} + " | " + $P{codigoMali} + " Lote: " +$P{lote}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement mode="Transparent" x="230" y="61" width="42" height="40" backcolor="#030000" uuid="230acd92-36da-4d6d-bf9f-732624dd690e"/>
+				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

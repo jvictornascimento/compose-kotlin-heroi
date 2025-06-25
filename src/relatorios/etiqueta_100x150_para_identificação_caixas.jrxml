@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lote" pageWidth="453" pageHeight="311" orientation="Landscape" columnWidth="453" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="863bfde3-f787-4878-8b7d-d860893192b7">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="descricao" class="java.lang.String"/>
+	<parameter name="codigoRusso" class="java.lang.Integer"/>
+	<parameter name="codigoMali" class="java.lang.Integer"/>
+	<parameter name="ip" class="java.lang.Integer"/>
+	<parameter name="temperatura" class="java.lang.String"/>
+	<parameter name="ledPorMetro" class="java.lang.Integer"/>
+	<parameter name="Modelo" class="java.lang.String"/>
+	<parameter name="ampere" class="java.lang.Integer"/>
+	<parameter name="watts" class="java.lang.Integer"/>
+	<parameter name="gtin" class="java.lang.Long"/>
+	<parameter name="tipoLed" class="java.lang.String"/>
+	<parameter name="fluxoLuminoso" class="java.lang.String"/>
+	<parameter name="volts" class="java.lang.Integer"/>
+	<parameter name="lote" class="java.lang.Integer"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="311" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="10" y="10" width="291" height="70" uuid="ff7ca612-85d8-4791-9207-f64c3fb458d3"/>
+				<box>
+					<pen lineWidth="1.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Codigo: " + $P{codigoRusso} +" | " +$P{codigoMali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="80" width="430" height="50" uuid="a9789da4-42c9-4fbe-9704-7282ad3eddbe"/>
+				<box topPadding="0" leftPadding="0">
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Descrição: " +$P{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="10" width="139" height="70" uuid="05b6d61a-956e-430d-a99f-22d809bb42ea"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lote: " + $P{lote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="130" width="430" height="30" uuid="851a1a8d-b28e-44b2-844d-b2026a49c5d0"/>
+				<box topPadding="0" leftPadding="0">
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Empresa: " +$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="160" width="101" height="30" uuid="3e6d6a0b-a3ab-493b-8130-fe994db64ceb"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Temperatura de cor:\n" + $P{temperatura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="160" width="109" height="30" uuid="36600907-beae-4aa7-ae62-11e37bf45423"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ip: \n" + $P{ip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="160" width="110" height="30" uuid="41e6b555-05fe-4668-8f74-b152943278f8"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Volts: \n" + $P{volts}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="160" width="110" height="30" uuid="285f6322-e4f3-4534-b2e6-9a2e03aa77d1"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Watts: \n" + $P{watts}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="190" width="210" height="30" uuid="445f13a9-b81f-4b31-95e4-08f6b787e611"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Quantidade na Caixa:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="190" width="220" height="30" uuid="a682cc1b-dba5-4620-b57b-4748060b7e5e"/>
+				<box>
+					<pen lineWidth="1.75"/>
+					<topPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Quantidade de caixa(s):"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="220" width="430" height="81" uuid="b9e81279-1ca5-4dc7-a4b8-21fa79f75802"/>
+				<box>
+					<pen lineWidth="1.75"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Observação:"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
