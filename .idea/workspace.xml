@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor: updated print screen and added combobox to select label model">
-      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_100x150_fita_led_modelo_antigo.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_100x150_para_identificação_caixas.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_100x40_para_fonte.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_100x80_fita_led_modelo_antigo.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_3_colunas_com_descrição.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_3_colunas_sem_descrição.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/relatorios/img/logo.png" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feat: Added different lot reports for item printing">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/ImpressaoService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/relatorios/mes/etiqueta_4_colunas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/relatorios/mes/etiqueta_4_colunas.jrxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "Z:/Java/desktop-kotlin-compose/Heroi/src/relatorios",
+    "last_opened_file_path": "Z:/Java/desktop-kotlin-compose/Heroi/src/relatorios/mes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\relatorios\mes" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\relatorios" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\relatorios\img" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\resources\relatorios" />
@@ -111,7 +108,7 @@
       <workItem from="1750164438101" duration="33868000" />
       <workItem from="1750684406983" duration="9313000" />
       <workItem from="1750810183946" duration="5357000" />
-      <workItem from="1750852240499" duration="12350000" />
+      <workItem from="1750852240499" duration="14239000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -297,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750858462384</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat: Added different lot reports for item printing">
+      <option name="closed" value="true" />
+      <created>1750890753669</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1750890753669</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +342,7 @@
     <MESSAGE value="refactor:  added item search by code to TelaListagemItens screen" />
     <MESSAGE value="refactor:  added item search by code to TelaListagemPedidos screen" />
     <MESSAGE value="refactor: updated print screen and added combobox to select label model" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: updated print screen and added combobox to select label model" />
+    <MESSAGE value="feat: Added different lot reports for item printing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Added different lot reports for item printing" />
   </component>
 </project>

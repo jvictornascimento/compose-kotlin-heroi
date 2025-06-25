@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import service.gerarPreviewEtiquetaMes
 
 @Composable
 fun TelaBoasVindas(onNavegar: (String) -> Unit) {
@@ -35,6 +36,11 @@ fun TelaBoasVindas(onNavegar: (String) -> Unit) {
 
         Button(onClick = { onNavegar("impressaoLote") }) {
             Text("Impresssão de Lote")
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(onClick = { gerarPreviewEtiquetaMes() }) {
+            Text("Impresssão mês")
         }
     }
 }
