@@ -14,6 +14,7 @@ import net.sf.jasperreports.engine.JREmptyDataSource
 import net.sf.jasperreports.engine.JasperCompileManager
 import net.sf.jasperreports.engine.JasperFillManager
 import net.sf.jasperreports.view.JasperViewer
+import java.io.File
 
 @Composable
 fun TelaImpressaoEtiquetaLote() {
@@ -21,10 +22,23 @@ fun TelaImpressaoEtiquetaLote() {
     var itensDoPedido by remember { mutableStateOf(listOf<Item>()) }
     var itemSelecionado by remember { mutableStateOf<Item?>(null) }
     var erro by remember { mutableStateOf<String?>(null) }
+
     val focusManager = LocalFocusManager.current
 
+    // Carrega os modelos disponíveis da pasta
+    val modelosEtiquetas = remember {
+        File("src/relatorios")
+            .listFiles { file -> file.extension == "jrxml" }
+            ?.map { file ->
+                file.nameWithoutExtension.replace("_", " ").replaceFirstChar { it.uppercase() } to file
+            } ?: emptyList()
+    }
+
+    var modeloSelecionado by remember { mutableStateOf<Pair<String, File>?>(null) }
+
     Column(modifier = Modifier.padding(16.dp)) {
-        Text("Impressão de Etiqueta", style = MaterialTheme.typography.h5)
+        Text("Impressão Etiqueta de Lote", style = MaterialTheme.typography.h4)
+        Spacer(modifier = Modifier.height(16.dp))
 
         OutlinedTextField(
             value = codigoPedido,
@@ -48,7 +62,6 @@ fun TelaImpressaoEtiquetaLote() {
                         false
                     }
                 }
-
         )
 
         Button(onClick = {
@@ -61,7 +74,6 @@ fun TelaImpressaoEtiquetaLote() {
                 itensDoPedido = emptyList()
                 itemSelecionado = null
             }
-
         }) {
             Text("Buscar Itens do Pedido")
         }
@@ -69,17 +81,18 @@ fun TelaImpressaoEtiquetaLote() {
         Spacer(modifier = Modifier.height(16.dp))
 
         if (itensDoPedido.isNotEmpty()) {
-            var expanded by remember { mutableStateOf(false) }
+            // Dropdown de item
+            var itemDropdownExpanded by remember { mutableStateOf(false) }
 
             Box {
-                TextButton(onClick = { expanded = true }) {
-                    Text(itemSelecionado?.descricao ?: "Selecione um item")
+                TextButton(onClick = { itemDropdownExpanded = true }) {
+                    Text(itemSelecionado?.descricao ?: "Selecionar item")
                 }
-                DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                DropdownMenu(expanded = itemDropdownExpanded, onDismissRequest = { itemDropdownExpanded = false }) {
                     itensDoPedido.forEach { item ->
                         DropdownMenuItem(onClick = {
                             itemSelecionado = item
-                            expanded = false
+                            itemDropdownExpanded = false
                         }) {
                             Text("${item.codigoRusso} | ${item.codigoMali} - ${item.descricao}")
                         }
@@ -89,11 +102,32 @@ fun TelaImpressaoEtiquetaLote() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            // Dropdown de modelo de etiqueta
+            var modeloDropdownExpanded by remember { mutableStateOf(false) }
+
+            Box {
+                TextButton(onClick = { modeloDropdownExpanded = true }) {
+                    Text(modeloSelecionado?.first ?: "Selecionar modelo de etiqueta")
+                }
+                DropdownMenu(expanded = modeloDropdownExpanded, onDismissRequest = { modeloDropdownExpanded = false }) {
+                    modelosEtiquetas.forEach { modelo ->
+                        DropdownMenuItem(onClick = {
+                            modeloSelecionado = modelo
+                            modeloDropdownExpanded = false
+                        }) {
+                            Text(modelo.first)
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
             Button(onClick = {
-                if (itemSelecionado != null) {
-                    gerarPreviewEtiqueta(itemSelecionado!!, codigoPedido)
+                if (itemSelecionado != null && modeloSelecionado != null) {
+                    gerarPreviewEtiqueta(itemSelecionado!!, codigoPedido, modeloSelecionado!!.second)
                 } else {
-                    erro = "Selecione um item antes de imprimir"
+                    erro = "Selecione um item e um modelo de etiqueta"
                 }
             }) {
                 Text("Imprimir")
@@ -107,11 +141,8 @@ fun TelaImpressaoEtiquetaLote() {
     }
 }
 
-
-fun gerarPreviewEtiqueta(item: Item, lote: String) {
+fun gerarPreviewEtiqueta(item: Item, lote: String, modelo: File) {
     try {
-        val caminhoJrxml = "src/relatorios/lote.jrxml"
-
         val parametros = mutableMapOf<String, Any?>(
             "descricao" to item.descricao,
             "codigoRusso" to item.codigoRusso,
@@ -128,8 +159,13 @@ fun gerarPreviewEtiqueta(item: Item, lote: String) {
             "volts" to (item.volt ?: 0),
             "lote" to (lote.toIntOrNull() ?: 0)
         )
+        if ("direto_na_rede" in modelo.nameWithoutExtension) {
+            val imagemPath = File("src/relatorios/img/PlacaA5.png").absolutePath
+            parametros["imagem"] = imagemPath
+        }
 
-        val report = JasperCompileManager.compileReport(caminhoJrxml)
+
+        val report = JasperCompileManager.compileReport(modelo.absolutePath)
         val jasperPrint = JasperFillManager.fillReport(report, parametros, JREmptyDataSource())
         JasperViewer.viewReport(jasperPrint, false)
 

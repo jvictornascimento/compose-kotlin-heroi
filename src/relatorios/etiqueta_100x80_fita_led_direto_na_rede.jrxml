@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lote" pageWidth="283" pageHeight="226" orientation="Landscape" columnWidth="283" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="863bfde3-f787-4878-8b7d-d860893192b7">
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<parameter name="descricao" class="java.lang.String"/>
+	<parameter name="codigoRusso" class="java.lang.Integer"/>
+	<parameter name="codigoMali" class="java.lang.Integer"/>
+	<parameter name="ip" class="java.lang.Integer"/>
+	<parameter name="temperatura" class="java.lang.String"/>
+	<parameter name="ledPorMetro" class="java.lang.Integer"/>
+	<parameter name="Modelo" class="java.lang.String"/>
+	<parameter name="ampere" class="java.lang.Integer"/>
+	<parameter name="watts" class="java.lang.Integer"/>
+	<parameter name="gtin" class="java.lang.Long"/>
+	<parameter name="tipoLed" class="java.lang.String"/>
+	<parameter name="fluxoLuminoso" class="java.lang.String"/>
+	<parameter name="volts" class="java.lang.Integer"/>
+	<parameter name="lote" class="java.lang.Integer"/>
+	<parameter name="imagem" class="java.lang.Object"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="226" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="10" width="262" height="34" uuid="ff7ca612-85d8-4791-9207-f64c3fb458d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="140" width="140" height="50" uuid="74774497-f709-4a6f-8e8c-5112a4a0547c"/>
+				<textElement>
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Atenção\n" +
+"• Alimentação: " +$P{volts} + "V.\n" +
+"• Limpe bem a superficie onde será instalada.\n" +
+"• Pode ser cortada nas marcações.\n" +
+"• Armazenar longe de umidade.\n" +
+"• Use uma fonte de alimentação a cada 5 metros."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="80" width="140" height="55" uuid="847a5f8d-717c-4369-b969-4f729f59bdf2"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["• Potência: " + $P{watts} +"W.\n" +
+"• Índice de Proteção: IP" + $P{ip} + "\n" +
+"• LEDs por Metro: " + $P{ledPorMetro} + "\n" +
+"• Tipo de LED: " + $P{tipoLed}  + "\n" +
+"• Lúmens: " + $P{fluxoLuminoso} + "Lm"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="20" y="140" width="90" height="40" uuid="ce5dae8b-f45d-49fc-81ab-276760154210"/>
+				<jr:EAN13 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" textPosition="bottom">
+					<jr:codeExpression><![CDATA[$P{gtin}]]></jr:codeExpression>
+				</jr:EAN13>
+			</componentElement>
+			<textField>
+				<reportElement x="10" y="130" width="120" height="10" uuid="7224ff1a-390d-40fc-b0df-2edaa346af3f"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Código: " + $P{codigoRusso} + " | " +$P{codigoMali}  + " Lote: " + $P{lote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="180" width="40" height="34" uuid="dea2f0a5-3a9a-4c32-92f1-b194875eb57c">
+					<printWhenExpression><![CDATA[$P{temperatura}.equals("3000K") ||
+$P{temperatura}.equals("3000k")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{temperatura}  +"\n ▼"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="180" width="40" height="34" uuid="c373aa4e-a8b1-407d-9205-8a64cc230931">
+					<printWhenExpression><![CDATA[$P{temperatura}.equals("4000K") ||
+$P{temperatura}.equals("4000k")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{temperatura}  +"\n ▼"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="180" width="40" height="34" uuid="ae7a00c0-d2fe-41ee-b894-23164dc2382a">
+					<printWhenExpression><![CDATA[$P{temperatura}.equals("6000K") ||
+$P{temperatura}.equals("6000k")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{temperatura}  +"\n ▼"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="40" width="130" height="46" uuid="6313a960-c07c-4fc2-a098-996d812bdeff"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Risco de choque eletrico, chame um profissional para efetuar a instalação!
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="113" y="45" width="30" height="30" uuid="6471f7b6-19e3-419f-95fc-b9018a2b0af4"/>
+				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

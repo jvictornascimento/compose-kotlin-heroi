@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor:  added item search by code to TelaListagemItens screen">
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="refactor:  added item search by code to TelaListagemPedidos screen">
+      <change afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_100x80_fita_led_direto_na_rede.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/relatorios/img/PlacaA5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaListagemPedidos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/relatorios/lote.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_lote.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/relatorios/lote.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/relatorios/etiqueta_100x80_fita_led.jrxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,25 +47,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build Heroi.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/Java/desktop-kotlin-compose/Heroi/src/main/resources/relatorios&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build Heroi.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Z:/Java/desktop-kotlin-compose/Heroi/src/relatorios/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\relatorios\img" />
+      <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\relatorios" />
       <recent name="Z:\Java\desktop-kotlin-compose\Heroi\src\main\resources\relatorios" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -101,7 +107,8 @@
       <updated>1750164436863</updated>
       <workItem from="1750164438101" duration="33868000" />
       <workItem from="1750684406983" duration="9313000" />
-      <workItem from="1750810183946" duration="3836000" />
+      <workItem from="1750810183946" duration="5357000" />
+      <workItem from="1750852240499" duration="3202000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -271,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750814547302</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor:  added item search by code to TelaListagemPedidos screen">
+      <option name="closed" value="true" />
+      <created>1750815255197</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1750815255197</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +324,7 @@
     <MESSAGE value="feet: Created TelaImpressaoEtiquetaLote" />
     <MESSAGE value="feet: Created TelaEditarPedido" />
     <MESSAGE value="refactor:  added item search by code to TelaListagemItens screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor:  added item search by code to TelaListagemItens screen" />
+    <MESSAGE value="refactor:  added item search by code to TelaListagemPedidos screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor:  added item search by code to TelaListagemPedidos screen" />
   </component>
 </project>
