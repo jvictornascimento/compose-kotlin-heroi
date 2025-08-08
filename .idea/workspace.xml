@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feat: Added different lot reports for item printing">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/ImpressaoService.kt" afterDir="false" />
+    <list default="true" id="4b6f0691-5685-4fcd-abf9-8bccd522f06f" name="Changes" comment="feat: Added function for printing labels with current month">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/TelaBoasVindas.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/pedido/TelaImpressaoEtiquetaLote.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/relatorios/mes/etiqueta_4_colunas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/relatorios/mes/etiqueta_4_colunas.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/config/DatabaseConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/config/DatabaseConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Itens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Item.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaCadastroItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/item/TelaEditarItem.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,31 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Heroi" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Heroi" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,12 +75,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build Heroi.executor": "Run",
+    "Gradle.desktop.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "Z:/Java/desktop-kotlin-compose/Heroi/src/relatorios/mes",
+    "last_opened_file_path": "Z:/Java/desktop-kotlin-compose/Heroi",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,7 +111,7 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.desktop">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="Heroi.main" />
@@ -108,7 +136,16 @@
       <workItem from="1750164438101" duration="33868000" />
       <workItem from="1750684406983" duration="9313000" />
       <workItem from="1750810183946" duration="5357000" />
-      <workItem from="1750852240499" duration="14239000" />
+      <workItem from="1750852240499" duration="15397000" />
+      <workItem from="1752685770240" duration="730000" />
+      <workItem from="1752862494777" duration="3107000" />
+      <workItem from="1753225883808" duration="17000" />
+      <workItem from="1753359987511" duration="96000" />
+      <workItem from="1753449526206" duration="310000" />
+      <workItem from="1753752785272" duration="68000" />
+      <workItem from="1754657542503" duration="267000" />
+      <workItem from="1754657818175" duration="373000" />
+      <workItem from="1754658532867" duration="1748000" />
     </task>
     <task id="LOCAL-00001" summary="Started project">
       <option name="closed" value="true" />
@@ -302,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750890753669</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="feat: Added function for printing labels with current month">
+      <option name="closed" value="true" />
+      <created>1750892592731</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1750892592731</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +388,7 @@
     <MESSAGE value="refactor:  added item search by code to TelaListagemPedidos screen" />
     <MESSAGE value="refactor: updated print screen and added combobox to select label model" />
     <MESSAGE value="feat: Added different lot reports for item printing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Added different lot reports for item printing" />
+    <MESSAGE value="feat: Added function for printing labels with current month" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Added function for printing labels with current month" />
   </component>
 </project>

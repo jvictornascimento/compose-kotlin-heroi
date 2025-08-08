@@ -10,7 +10,7 @@ data class Item(
     val ledPorMetro: Int?,
     val modelo: String?,
     val amper: Double?,
-    val watts: Int?,
+    val watts: Double?,
     val blindada: Boolean?,
     val gtin: Long?,
     val tipoLed: String?,

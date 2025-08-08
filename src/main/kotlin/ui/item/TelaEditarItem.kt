@@ -202,7 +202,7 @@ fun TelaEditarItem(
                     ledPorMetro = ledPorMetro.toIntOrNull(),
                     modelo = modelo,
                     amper = amper.toDoubleOrNull(),
-                    watts = watts.toIntOrNull(),
+                    watts = watts.toDoubleOrNull(),
                     blindada = blindada,
                     gtin = gtin.toLongOrNull(),
                     tipoLed = tipoLed,

@@ -12,7 +12,7 @@ object Itens : Table("item") {
     val ledPorMetro = integer("ledPorMetro").nullable()
     val modelo = varchar("modelo", 50).nullable()
     val amper = double("amper").nullable()
-    val watts = integer("watts").nullable()
+    val watts = double("watts").nullable()
     val blindada = bool("blindada").nullable()
     val gtin = long("gtin").nullable()
     val tipoLed = varchar("tipoLed",50).nullable()
