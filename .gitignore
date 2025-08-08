@@ -40,3 +40,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Configuration to DataBase ###
+/src/main/kotlin/config/DatabaseConfig.kt

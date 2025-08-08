@@ -122,6 +122,12 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
                     .height(80.dp)
                     .padding(8.dp)
             )
+
+        }
+        Row(modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 8.dp)) {
+
             OutlinedTextField(
                 value = tipoLed,
                 onValueChange = { tipoLed = it },
@@ -131,10 +137,6 @@ fun TelaCadastroItem(onSalvar: () -> Unit, onCancelar: () -> Unit) {
                     .height(80.dp)
                     .padding(8.dp)
             )
-        }
-        Row(modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 8.dp)) {
 
             OutlinedTextField(
                 value = amper,
