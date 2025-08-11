@@ -6,6 +6,9 @@ import model.Pedido
 import net.sf.jasperreports.engine.JREmptyDataSource
 import net.sf.jasperreports.engine.JasperCompileManager
 import net.sf.jasperreports.engine.JasperFillManager
+import net.sf.jasperreports.engine.export.JRPrintServiceExporter
+import net.sf.jasperreports.export.SimpleExporterInput
+import net.sf.jasperreports.export.SimplePrintServiceExporterConfiguration
 import net.sf.jasperreports.view.JasperViewer
 import java.io.File
 import java.time.LocalDate
@@ -13,28 +16,56 @@ import java.time.format.TextStyle
 import java.util.Locale
 
 class ImpressaoService {
-}
     fun gerarPreviewEtiquetaMes() {
         try {
             val hoje = LocalDate.now()
             val parametros = mutableMapOf<String, Any?>(
                 "ano" to hoje.year.toString(),
-                "mes" to hoje.month.getDisplayName(TextStyle.FULL, Locale("pt","BR")).uppercase()
+                "mes" to hoje.month.getDisplayName(TextStyle.FULL, Locale("pt", "BR")).uppercase()
             )
+
             val arquivo = File("src/relatorios/mes/etiqueta_4_colunas.jrxml")
             val imagemPath = File("src/relatorios/img/logo.png").absolutePath
             parametros["imagem"] = imagemPath
 
-
             val report = JasperCompileManager.compileReport(arquivo.absolutePath)
             val jasperPrint = JasperFillManager.fillReport(report, parametros, JREmptyDataSource())
-            JasperViewer.viewReport(jasperPrint, false)
+
+            // Criar arquivo temporário PDF
+            val tempFile = File.createTempFile("etiqueta_mes_", ".pdf")
+            tempFile.deleteOnExit() // garante exclusão no final da JVM
+
+            // Exportar para PDF
+            net.sf.jasperreports.engine.JasperExportManager.exportReportToPdfFile(jasperPrint, tempFile.absolutePath)
+
+            // Abrir no Acrobat Reader (ou outro programa padrão de PDF)
+            val desktop = java.awt.Desktop.getDesktop()
+            desktop.open(tempFile)
+
+            // Thread para aguardar e apagar o PDF
+            Thread {
+                val logFile = File("LOG_IMPRESSAO.txt") // raiz do programa
+                val logMensagem = "[${java.time.LocalDateTime.now()}] Impressão de etiqueta do mês gerada: ${tempFile.name}\n"
+
+                try {
+                    // Cria ou acrescenta no arquivo
+                    logFile.appendText(logMensagem, Charsets.UTF_8)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+                Thread.sleep(15_000) // espera 15 segundos
+                if (tempFile.exists()) {
+                    tempFile.delete()
+                    println("Arquivo temporário apagado.")
+                }
+            }.start()
 
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
-
+}
     fun gerarPreviewEtiqueta(item: Item, lote: String, modelo: File, pedido: Pedido) {
         try {
             val parametros = mutableMapOf<String, Any?>(
